@@ -1,0 +1,1208 @@
+/* =========================================================
+   WHAT I DO — PREMIUM INTERACTIVE SECTION
+   ========================================================= */
+
+.whatido-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 160px 0 150px;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      circle at 18% 35%,
+      rgba(103, 88, 255, 0.07),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(103, 88, 255, 0.05),
+      transparent 28%
+    ),
+    #070707;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   CURSOR GLOW
+   ========================================================= */
+
+.whatido-cursor-glow {
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(108, 94, 255, 0.11),
+      transparent 68%
+    );
+
+  filter: blur(40px);
+
+  pointer-events: none;
+
+  z-index: -1;
+
+  transition:
+    left 0.25s ease-out,
+    top 0.25s ease-out;
+}
+
+
+/* =========================================================
+   BACKGROUND NUMBER
+   ========================================================= */
+
+.whatido-background-number {
+  position: absolute;
+
+  left: -70px;
+  top: 18%;
+
+  font-size: clamp(280px, 42vw, 720px);
+
+  line-height: 0.7;
+
+  font-weight: 800;
+
+  letter-spacing: -0.1em;
+
+  color: rgba(255, 255, 255, 0.017);
+
+  pointer-events: none;
+  user-select: none;
+
+  z-index: -2;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.whatido-container {
+  position: relative;
+
+  width: min(1380px, calc(100% - 100px));
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.whatido-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 90px;
+
+  opacity: 0;
+
+  transform: translateY(35px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.whatido-visible .whatido-header {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+.whatido-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.25em;
+}
+
+
+.whatido-label-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #7060ff;
+
+  box-shadow:
+    0 0 12px rgba(112, 96, 255, 0.9);
+
+  animation:
+    whatidoPulse 2s ease-in-out infinite;
+}
+
+
+.whatido-index {
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.whatido-intro {
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 100px;
+
+  align-items: end;
+
+  margin-bottom: 125px;
+}
+
+
+.whatido-heading {
+  margin: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  font-size: clamp(45px, 9vw, 90px);
+
+  line-height: 0.90;
+
+  font-weight: 800;
+
+  letter-spacing: -0.085em;
+
+  text-transform: uppercase;
+
+  opacity: 0;
+
+  transform: translateY(80px);
+
+  clip-path: inset(100% 0 0 0);
+
+  transition:
+    opacity 1s ease 0.15s,
+    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.15s,
+    clip-path 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+}
+
+.whatido-visible .whatido-heading {
+  opacity: 1;
+
+  transform: translateY(0);
+
+  clip-path: inset(0 0 0 0);
+}
+
+
+.whatido-heading span:first-child {
+  color: #ffffff;
+}
+
+
+.whatido-heading .heading-offset {
+  margin-left: 0vw;
+
+  background:
+    linear-gradient(
+      120deg,
+      #ffffff 5%,
+      #bcb5ff 45%,
+      #685aff 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+
+.whatido-heading span:last-child {
+  margin-left: 0vw;
+}
+
+
+.whatido-heading b {
+  color: #7060ff;
+}
+
+
+/* =========================================================
+   INTRO TEXT
+   ========================================================= */
+
+.whatido-intro-text {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  max-width: 500px;
+
+  padding-bottom: 8px;
+
+  opacity: 0;
+
+  transform: translateY(45px);
+
+  transition:
+    opacity 0.9s ease 0.45s,
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.45s;
+}
+
+.whatido-visible .whatido-intro-text {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+.whatido-intro-text .intro-line {
+  flex: 0 0 35px;
+
+  width: 35px;
+  height: 1px;
+
+  margin-top: 10px;
+
+  background: #7060ff;
+
+  box-shadow:
+    0 0 10px rgba(112, 96, 255, 0.6);
+}
+
+
+.whatido-intro-text p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.01em;
+}
+
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+.whatido-services {
+  width: 100%;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+
+/* =========================================================
+   SERVICE ROW
+   ========================================================= */
+
+.whatido-service {
+  position: relative;
+
+  min-height: 270px;
+
+  padding: 42px 35px 42px 0;
+
+  display: grid;
+
+  grid-template-columns: 90px 1fr 80px;
+
+  gap: 35px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  transform: translateY(65px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1),
+    padding-left 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.whatido-visible .whatido-service:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.55s;
+}
+
+
+.whatido-visible .whatido-service:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
+
+
+.whatido-visible .whatido-service:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.85s;
+}
+
+
+.whatido-visible .whatido-service:nth-child(4) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1s;
+}
+
+
+/* =========================================================
+   SERVICE HOVER BACKGROUND
+   ========================================================= */
+
+.whatido-service::before {
+  content: "";
+
+  position: absolute;
+
+  left: -5%;
+
+  bottom: -80%;
+
+  width: 110%;
+
+  height: 180%;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(103, 88, 255, 0.14),
+      transparent 60%
+    );
+
+  opacity: 0;
+
+  transform: scale(0.7);
+
+  transition:
+    opacity 0.65s ease,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+  pointer-events: none;
+}
+
+
+.whatido-service:hover::before {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+
+/* =========================================================
+   SERVICE TOP
+   ========================================================= */
+
+.service-top {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+
+.service-number {
+  color: rgba(255, 255, 255, 0.28);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  transition:
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+.whatido-service:hover .service-number {
+  color: #7060ff;
+
+  transform: translateX(8px);
+}
+
+
+.service-counter {
+  color: rgba(255, 255, 255, 0.18);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   SERVICE MAIN
+   ========================================================= */
+
+.service-main {
+  position: relative;
+
+  z-index: 2;
+
+  min-width: 0;
+}
+
+
+.service-title {
+  margin: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+      font-size: clamp(48px, 6vw, 65px);
+
+  line-height: 0.86;
+
+  font-weight: 750;
+
+  letter-spacing: -0.065em;
+
+  text-transform: uppercase;
+
+  transition:
+    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.whatido-service:hover .service-title {
+  transform: translateX(12px);
+}
+
+
+.service-title span:last-child {
+  color: rgba(255, 255, 255, 0.38);
+
+  transition:
+    color 0.45s ease;
+}
+
+
+.whatido-service:hover .service-title span:last-child {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   SERVICE DETAILS
+   ========================================================= */
+
+.service-details {
+  max-width: 580px;
+
+  margin-top: 35px;
+
+  opacity: 0;
+
+  transform: translateY(15px);
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.whatido-service:hover .service-details {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+.service-description {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   SERVICE TAGS
+   ========================================================= */
+
+.service-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 20px;
+}
+
+
+.service-tags span {
+  padding: 7px 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.whatido-service:hover .service-tags span {
+  color: rgba(255, 255, 255, 0.7);
+
+  border-color: rgba(112, 96, 255, 0.3);
+
+  background: rgba(112, 96, 255, 0.04);
+}
+
+
+/* =========================================================
+   ARROW
+   ========================================================= */
+
+.service-arrow {
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: flex-end;
+
+  padding-top: 2px;
+}
+
+
+.service-arrow span {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 50%;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 20px;
+
+  transition:
+    color 0.4s ease,
+    background 0.4s ease,
+    border-color 0.4s ease,
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.whatido-service:hover .service-arrow span {
+  color: #ffffff;
+
+  background: #7060ff;
+
+  border-color: #7060ff;
+
+  transform: translate(5px, -5px) rotate(5deg);
+}
+
+
+/* =========================================================
+   LARGE HOVER NUMBER
+   ========================================================= */
+
+.service-hover-number {
+  position: absolute;
+
+  right: 60px;
+  bottom: -60px;
+
+  font-size: 240px;
+
+  line-height: 0.8;
+
+  font-weight: 800;
+
+  letter-spacing: -0.1em;
+
+  color: rgba(255, 255, 255, 0.018);
+
+  pointer-events: none;
+
+  transform: translateY(50px);
+
+  transition:
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.5s ease;
+}
+
+
+.whatido-service:hover .service-hover-number {
+  transform: translateY(0);
+
+  color: rgba(112, 96, 255, 0.045);
+}
+
+
+/* =========================================================
+   BOTTOM STATEMENT
+   ========================================================= */
+
+.whatido-bottom {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 65px;
+
+  opacity: 0;
+
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.8s ease 1.15s,
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 1.15s;
+}
+
+
+.whatido-visible .whatido-bottom {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+.bottom-line {
+  width: 35px;
+  height: 1px;
+
+  flex: 0 0 35px;
+
+  background: rgba(112, 96, 255, 0.7);
+}
+
+
+.whatido-bottom p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
+
+
+.whatido-bottom strong {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+
+.bottom-arrow {
+  margin-left: auto;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 18px;
+
+  animation:
+    whatidoFloat 2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes whatidoPulse {
+  0%,
+  100% {
+    transform: scale(1);
+
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.7);
+
+    opacity: 1;
+  }
+}
+
+
+@keyframes whatidoFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .whatido-section {
+    padding: 125px 0 120px;
+  }
+
+  .whatido-container {
+    width: calc(100% - 60px);
+  }
+
+  .whatido-intro {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    margin-bottom: 90px;
+  }
+
+  .whatido-heading {
+    font-size: clamp(65px, 11vw, 110px);
+  }
+
+  .whatido-intro-text {
+    max-width: 620px;
+  }
+
+  .whatido-service {
+    min-height: 250px;
+
+    grid-template-columns: 70px 1fr 70px;
+
+    gap: 25px;
+  }
+
+  .service-title {
+    font-size: clamp(44px, 7vw, 75px);
+  }
+
+  .service-details {
+    opacity: 1;
+
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .whatido-section {
+    min-height: auto;
+
+    padding: 105px 0 90px;
+  }
+
+  .whatido-container {
+    width: calc(100% - 36px);
+  }
+
+
+  /* Header */
+
+  .whatido-header {
+    margin-bottom: 65px;
+  }
+
+  .whatido-label {
+    font-size: 19px;
+
+    letter-spacing: 0.18em;
+  }
+
+  .whatido-index {
+    font-size: 18px;
+  }
+
+
+  /* Intro */
+
+  .whatido-intro {
+    gap: 38px;
+
+    margin-bottom: 75px;
+  }
+
+  .whatido-heading {
+    font-size: clamp(52px, 15vw, 82px);
+
+    line-height: 0.87;
+
+    letter-spacing: -0.07em;
+  }
+
+  .whatido-heading .heading-offset {
+    margin-left: 10vw;
+  }
+
+  .whatido-heading span:last-child {
+    margin-left: 3vw;
+  }
+
+
+  .whatido-intro-text {
+    gap: 14px;
+
+    max-width: 340px;
+  }
+
+  .whatido-intro-text .intro-line {
+    flex: 0 0 24px;
+
+    width: 24px;
+  }
+
+  .whatido-intro-text p {
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+
+  /* Services */
+
+  .whatido-services {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .whatido-service {
+    min-height: auto;
+
+    padding: 42px 0 48px;
+
+    display: block;
+
+    overflow: hidden;
+  }
+
+
+  .service-top {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+  }
+
+
+  .service-number {
+    font-size: 10px;
+  }
+
+
+  .service-counter {
+    font-size: 8px;
+  }
+
+
+  .service-main {
+    width: 100%;
+  }
+
+
+  .service-title {
+    font-size: clamp(45px, 13.5vw, 70px);
+
+    line-height: 0.88;
+
+    letter-spacing: -0.065em;
+  }
+
+
+  .whatido-service:hover .service-title {
+    transform: none;
+  }
+
+
+  .service-title span:last-child {
+    color: rgba(255, 255, 255, 0.42);
+  }
+
+
+  /* Always show details on touch devices */
+
+  .service-details {
+    max-width: 100%;
+
+    margin-top: 27px;
+
+    opacity: 1;
+
+    transform: none;
+  }
+
+
+  .service-description {
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    max-width: 340px;
+  }
+
+
+  .service-tags {
+    gap: 6px;
+
+    margin-top: 18px;
+  }
+
+
+  .service-tags span {
+    padding: 7px 9px;
+
+    font-size: 7px;
+  }
+
+
+  /* Arrow */
+
+  .service-arrow {
+    position: absolute;
+
+    right: 0;
+    top: 39px;
+
+    padding: 0;
+  }
+
+
+  .service-arrow span {
+    width: 45px;
+    height: 45px;
+
+    font-size: 16px;
+  }
+
+
+  .whatido-service:hover .service-arrow span {
+    transform: none;
+
+    background: transparent;
+
+    border-color: rgba(255, 255, 255, 0.12);
+
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+
+  /* Background number */
+
+  .service-hover-number {
+    right: -15px;
+    bottom: -30px;
+
+    font-size: 170px;
+  }
+
+
+  /* Bottom */
+
+  .whatido-bottom {
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-top: 50px;
+  }
+
+  .whatido-bottom p {
+    font-size: 8px;
+
+    line-height: 1.6;
+
+    letter-spacing: 0.13em;
+  }
+
+  .bottom-line {
+    width: 22px;
+
+    flex: 0 0 22px;
+
+    margin-top: 6px;
+  }
+
+  .bottom-arrow {
+    display: none;
+  }
+
+
+  /* Background */
+
+  .whatido-background-number {
+    left: -25px;
+
+    top: 25%;
+
+    font-size: 310px;
+  }
+
+  .whatido-cursor-glow {
+    width: 320px;
+    height: 320px;
+
+    filter: blur(30px);
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .whatido-container {
+    width: calc(100% - 28px);
+  }
+
+  .whatido-section {
+    padding-top: 90px;
+  }
+
+  .whatido-heading {
+    font-size: clamp(46px, 14.5vw, 65px);
+  }
+
+  .whatido-intro-text p {
+    font-size: 13px;
+  }
+
+  .service-title {
+    font-size: clamp(42px, 13.5vw, 60px);
+  }
+
+  .service-description {
+    font-size: 12.5px;
+  }
+
+  .whatido-background-number {
+    font-size: 250px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .whatido-section *,
+  .whatido-section *::before,
+  .whatido-section *::after {
+    animation: none !important;
+
+    transition: none !important;
+  }
+
+  .whatido-section .whatido-header,
+  .whatido-section .whatido-heading,
+  .whatido-section .whatido-intro-text,
+  .whatido-section .whatido-service,
+  .whatido-section .whatido-bottom {
+    opacity: 1;
+
+    transform: none;
+
+    clip-path: none;
+  }
+
+  .whatido-section .service-details {
+    opacity: 1;
+
+    transform: none;
+  }
+}

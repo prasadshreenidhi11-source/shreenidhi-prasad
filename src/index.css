@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+/* =========================================
+   GLOBAL TYPOGRAPHY SCALE
+   Slightly smaller premium headings
+   ========================================= */
+
+.hero-title {
+  font-size: clamp(58px, 7.2vw, 108px);
+}
+
+.about-heading {
+  font-size: clamp(52px, 6.2vw, 92px);
+}
+
+.projects-title {
+  font-size: clamp(52px, 6.2vw, 92px);
+}
+
+.journey-title {
+  font-size: clamp(52px, 6.2vw, 92px);
+}
+
+.how-work-title {
+  font-size: clamp(52px, 6.2vw, 92px);
+}
+
+.exploring-title {
+  font-size: clamp(52px, 6.2vw, 92px);
+}
+
+.contact-title {
+  font-size: clamp(52px, 6.2vw, 92px);
+}
+
+.footer-brand-name {
+  font-size: clamp(42px, 5vw, 76px);
+}
