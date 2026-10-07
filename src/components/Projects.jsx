@@ -56,6 +56,18 @@ const projects = [
     category: "FINANCIAL EXPERIENCE",
     url: "https://finance-web-two-rouge.vercel.app/",
   },
+  {
+   number: "10",
+   title: "MEDFLOW",
+   category: "HOSPITAL MANAGEMENT",
+   url:"https://medflow-hospitality.vercel.app/", 
+  },
+  {
+   number: "11",
+   title: "BRAND-SURGE",
+   category: "PRODUCTS",
+   url:"https://brand-surge-swwn.vercel.app", 
+  },
 ];
 
 function Projects() {
