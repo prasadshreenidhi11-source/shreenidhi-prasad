@@ -68,6 +68,12 @@ const projects = [
    category: "PRODUCTS",
    url:"https://brand-surge-swwn.vercel.app", 
   },
+  {
+   number: "12",
+   title: "AAYDS",
+   category: "DISABILITY",
+   url:"https://aayds-web-redesign.vercel.app/", 
+  },
 ];
 
 function Projects() {
